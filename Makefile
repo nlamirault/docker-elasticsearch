@@ -6,4 +6,4 @@ all: ${elastic_debfile}
 	docker build -t pgrange/elasticsearch .
 
 ${elastic_debfile}:
-	curl -O https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-${elastic_version}.deb
+	cd files; curl -O https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-${elastic_version}.deb
