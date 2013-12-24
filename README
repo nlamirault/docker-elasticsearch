@@ -1,0 +1,8 @@
+Run make to build a working elasticsearch docker image
+
+ make
+
+Then you can run your image. For instance, if you want to keep your
+elasticsearch db in /tmp/elastic-storage (maybe not the best place) :
+
+ docker run -d -p 9200:9200 -v /tmp/elastic-storage/log/:/var/log/elasticsearch -v /tmp/elastic-storage/data/:/var/lib/elasticsearch/ pgrange/elasticsearch
